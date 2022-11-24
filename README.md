@@ -3,10 +3,10 @@
 The overall structure is good and i am pleased you are using the Repository Design pattern which may make things easy if 
 we want to switch our source of datas from Eloquent to an other provider (Even an external API of course).
 
-- An other good observation is that almost all the string are enclosed in single  quote and this save time since the PHP engine will try to find variable within  the string and i will print it as is.
-- I saw the environement variables are playing alot in the RBAC and i would discourage this. The Role Based Access could be managed by storing role ids in the database  to allow them being easily managed programmatically.
+- An other good observation is that almost all the string are enclosed in single  quote and this save time since the PHP engine will not try to find a variable within  the string and i will print it as is.
+- I saw the environement variables are playing alot in the RBAC and i would discourage this. The Role Based Access could be managed by storing role ids in the database  to allow them being easily managed programmatically or even from the application frontend.
 - Another good news is that nowadays laravel is shipped with well structured RBAC and even more with fortify...We can delegate it to manage **authorization** and **authentication** as a middleware for specifics route and verbs; with that we won't need to reverify auth in each controller method.
-- An suggestion would be to use the Event subscription class in the whole application instead of hardcoding logging and actions on each event.
+- An other suggestion would be to use the Event subscription class in the whole application instead of hardcoding logging and actions on each event.
 
 
 ## A short note about the test
